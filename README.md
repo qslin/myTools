@@ -1,6 +1,9 @@
 ### ggstat: one command comprehensive statistics of gneomes and annotations
 
-Usage: write a configuration file with the following format (the second column is the estimated genome size; only the first column must exist; the others are optional)
+Usage: write a configuration file with the following format 
+
+The second column is the estimated genome size
+Only the first column must exist; the others are optional
 
 ```
 genomeA.fa 400000000 genomeA.gtf genomeA.bed
