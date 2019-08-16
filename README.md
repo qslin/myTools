@@ -3,6 +3,7 @@
 Usage: write a configuration file with the following format 
 
 The second column is the estimated genome size
+
 Only the first column must exist; the others are optional
 
 ```
