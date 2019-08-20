@@ -32,11 +32,13 @@ The outputs will be in the same directory with your configuration file.
 * Basic statistics for genes:
 * [x] Number of genes
 * [x] Number of genes with 2 or more isoforms
+* [x] Number of transcripts
 * [x] Number of mono-exonic transcripts
-* [x] Average Number of Exons per transcript
-* [x] Average CDS length
-* [x] Average exon length
-* [x] Average intron length
+* [x] Average number of exons per transcript
+* [x] Average/Most frequent/Longest/Shortest CDS length
+* [x] Average/Most frequent/Longest/Shortest exon length
+* [x] Average/Most frequent/Longest/Shortest intron length
+* [x] Length of genome covered by genes
 * [x] Length of genome covered by exons
 * [x] Length of genome covered by introns
 

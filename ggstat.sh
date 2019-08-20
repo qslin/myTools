@@ -1,13 +1,18 @@
-mkdir ggstat_results
-cd ggstat_results
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+mkdir ggstat_results_$(date +%Y%m%d_%H%M%S)
+cd ggstat_results_$(date +%Y%m%d_%H%M%S)
 
 lines=()
-while read line; do lines+=("$line"); done < $1
+while read line; do lines+=("$line"); done < ../$1
 
 for n in ${!lines[@]}
 do
-	para=$(echo ${lines[$n]} | awk '{print $1,$2}')
-	perl ggstat.pl $para > ggstat_tmp
+	para1=$(echo ${lines[$n]} | awk '{print $1,$2}')
+	para2=$(echo ${lines[$n]} | awk '{print $3,$4}')
+	perl $SCRIPTPATH/ggstat.pl $para1 > ggstat_tmp
+	sh $SCRIPTPATH/ggstat_gtf.sh $para2 >> ggstat_tmp
 	if [ $n = "0" ]; then
 		cat ggstat_tmp > ggstat_genome.txt
 	else
